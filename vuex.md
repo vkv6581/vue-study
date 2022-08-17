@@ -35,6 +35,8 @@ view : 사용자에게 비춰지는 화면
 vue.js에선 데이터 전달을 상->하위 컴포넌트로밖에 할 수 없기 때문에 상태관리 패턴이 필요하다.
 (이벤트를 통해서도 구현이 가능하지만 컴포넌트가 복잡해질 경우 추적이 어려움)
 
+![event](https://joshua1988.github.io/vue-camp/assets/img/component-communication.2bb1d838.png)
+
 --------------------------
 
 ### vuex - vue에서의 상태 관리 패턴
@@ -101,7 +103,7 @@ state: {
 	num: 10
 },
 getters: {
-	getNumber(state) {
+    getNumber(state) {
     	return state.num;
     },
     doubleNumber(state) {
@@ -123,7 +125,7 @@ getters: {
 // store.js
 state: { num: 20 },
 mutations: {
-	printNumbers(state){
+    printNumbers(state){
     	return state.num
     },
     sumNumbers(state,anotherNum){
