@@ -431,6 +431,27 @@ interface Dropdown<T> {
 const obj = Dropdown<number> = {value: 10, selected: false}
 ```
 
+- 제네릭에 타입 힌트
+```
+//제네릭에 들어올 타입이 배열이라고 힌트를 주는 것.
+function logTextLength<T>(text: T[]): T[] {
+    console.log(text.length);
+}
+```
+```
+interface ShoppingItem {
+    name: string;
+    price: number;
+    stock: number;
+}
+
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOptin: T): T {
+    return itemOption;
+}
+
+## 타입 추론
+- 타입스크립트에서 타입을 추론하는 방법.
+- vscode의 인텔리센스, 타입스크립트의 코드 서버를 통해 실시간으로 체크가 이루어짐.
 
 ## 용어 설명
 - 타이핑(Typing) : 변수들에 타입을 맵핑하는 것.
